@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+.container {
+  width: 100%;
+  max-width: $maxWidth;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  margin-left: auto;
+  margin-right: auto;
+  @include responsive(sm) {
+    padding-left: $gutter + 1rem; // 1.5rem + 1rem = 2.5rem;
+    padding-right: $gutter + 1rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+
+.row > * {
+  padding: $gutter;
+}
+
+@each $key, $value in $breakPoints {
+  @if $key == xlg {
+    @media (min-width: $value) {
+      @include columns($key);
+    }
+  } @else {
+    @media (max-width: $value) {
+      @include columns($key);
+    }
+  }
+}

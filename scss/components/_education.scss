@@ -1,0 +1,79 @@
+@use "../abstracts" as *;
+.education {
+  padding: $padding-y 0;
+  &--row1 [class^="col-"]:nth-child(2) {
+    transform: skewY(8deg);
+    @include responsive(lg) {
+      transform: none;
+    }
+  }
+  &--row1 [class^="col-"]:nth-child(4) {
+    transform: skewY(8deg);
+    @include responsive(lg) {
+      transform: none;
+    }
+  }
+  &--row2 [class^="col-"]:nth-child(1) {
+    transform: skewY(-8deg);
+    @include responsive(lg) {
+      transform: none;
+    }
+  }
+  &--row2 [class^="col-"]:nth-child(3) {
+    transform: skewY(-8deg);
+    @include responsive(lg) {
+      transform: none;
+    }
+  }
+  &__card {
+    width: 100%;
+    background: linear-gradient(110deg, $white 50%, $green-50 50%);
+    padding: 1.5rem;
+    box-shadow: -3rem 3rem 2rem -3rem rgba(52, 211, 153, 0.2);
+    border-radius: 0.3rem;
+    &__title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 2rem;
+      text-transform: uppercase;
+      background: linear-gradient(45deg, $black 20%, $green-500 20%);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    &__block {
+      @include flexBox(null, center);
+      margin-top: 1.5rem;
+      &__left {
+        @include flexBox(center, center);
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+        &--house {
+          background: $green-100;
+          i {
+            color: $green-600;
+            font-size: 1.6rem;
+          }
+        }
+        &--calendar {
+          background: $gray-200;
+          i {
+            color: $gray-700;
+            font-size: 1.6rem;
+          }
+        }
+      }
+      &__right {
+        display: inline-block;
+        margin-left: 1rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: $black;
+        text-transform: capitalize;
+        flex: 1;
+      }
+    }
+  }
+}

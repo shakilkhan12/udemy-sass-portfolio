@@ -1,0 +1,134 @@
+@use "../abstracts/" as *;
+.testimonials {
+  padding: $padding-y 0;
+  background: $green-50;
+  &__card {
+    width: 100%;
+    background: $white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: -3rem 3rem 3rem -3rem rgba(0, 0, 0, 0.1);
+    position: relative;
+    &__icon {
+      @include position(absolute, 1rem, 2rem, null, null);
+      i {
+        font-size: 4rem;
+        color: $green-50;
+      }
+    }
+    &__user {
+      @include flexBox(null, center);
+      &__image {
+        width: 5.5rem;
+        height: 5.5rem;
+        img {
+          @include imageCover;
+          border-radius: 50%;
+        }
+      }
+      &__details {
+        margin-left: 1rem;
+        &__name {
+          display: block;
+          font-size: 1.4rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: $black;
+        }
+        &__country {
+          display: block;
+          font-size: 1.2rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: $green-600;
+        }
+        &__rating {
+          i {
+            font-size: 1.2rem;
+            color: orange;
+          }
+        }
+      }
+    }
+    &__message {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      color: $gray-700;
+    }
+  }
+  &__right {
+    width: 100%;
+    min-height: 100%;
+    background: $green-400;
+    padding: 3rem;
+    @include flexBox(center, null);
+    flex-direction: column;
+    &__heading {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 3.2rem;
+      background: linear-gradient(45deg, $green-900 20%, $white 20%);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    &__images {
+      width: 100%;
+      margin-top: 1.5rem;
+      @include flexBox(null, center);
+      &__block {
+        width: 4rem;
+        height: 4rem;
+        margin-left: -1.5rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        img {
+          @include imageCover;
+          border-radius: 50%;
+          background: $green-400;
+          border: 0.3rem solid $green-400;
+        }
+      }
+      &__clients {
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $green-900;
+      }
+    }
+    &__rating {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      @include flexBox(null, center);
+      background: $green-900;
+      &__avg {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $orange;
+      }
+      &__stars {
+        margin-left: 0.5rem;
+        i {
+          font-size: 1.4rem;
+          color: $orange;
+        }
+      }
+      &__total {
+        margin-left: 0.5rem;
+        color: $gray-300;
+        font-size: 1.3rem;
+      }
+    }
+    &__link {
+      margin-top: 1.5rem;
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $white;
+        font-weight: 500;
+      }
+    }
+  }
+}

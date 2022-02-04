@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+.skills {
+  padding: $padding-y 0;
+  @include responsive(xsm) {
+    padding-top: 4rem;
+  }
+  &__contents {
+    width: 90%;
+    @include responsive(sm) {
+      width: 100%;
+    }
+    &__heading {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 5rem;
+      color: $black;
+      @include responsive(md) {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+      @include responsive(xsm) {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+      }
+    }
+    &__message {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      color: $gray-700;
+    }
+  }
+  &__block {
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+    box-shadow: 1rem 2rem 2rem -1rem rgba(0, 0, 0, 0.1);
+    &__exp {
+      width: 10rem;
+      padding: 1.2rem 1.5rem;
+      background: $white;
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    &__list {
+      background: $green-500;
+      flex: 1;
+      color: $white;
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 1.2rem 1.5rem;
+      @include responsive(xsm) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

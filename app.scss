@@ -1,0 +1,23 @@
+// import base modules
+@use "scss/base/typegraphy";
+@use "scss/base/reset";
+
+// import components module
+@use "scss/components/nav";
+@use "scss/components/header";
+@use "scss/components/buttons";
+@use "scss/components/modal";
+@use "scss/components/about";
+@use "scss/components/education";
+@use "scss/components/projects";
+@use "scss/components/skills";
+@use "scss/components/testimonials";
+@use "scss/components/blogs";
+@use "scss/components/footer";
+@use "scss/components/form";
+
+// import layout modules
+@use "scss/layout/grid";
+
+// import util modules
+@use "scss/utils/utils";

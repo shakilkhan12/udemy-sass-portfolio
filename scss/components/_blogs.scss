@@ -1,0 +1,103 @@
+@use "../abstracts" as *;
+.blogs {
+  padding: $padding-y 0;
+  &__card {
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 1rem -1rem rgba(33, 35, 38, 0.1);
+    &__image {
+      width: 100%;
+      height: 18rem;
+      overflow: hidden;
+      position: relative;
+      @include responsive(sm) {
+        height: 25rem;
+      }
+      @include responsive(xsm) {
+        height: 18rem;
+      }
+      &:hover img {
+        transform: scale(1.1);
+      }
+      img {
+        @include imageCover;
+        transition: transform 0.5s linear;
+      }
+      &__layer {
+        @include position(absolute, 0, 0, 0, 0);
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1.5rem;
+        @include flexBox(null, flex-end);
+        &__category {
+          color: $white;
+          text-transform: capitalize;
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+      }
+    }
+    &__author {
+      @include flexBox(null, center);
+      padding: 1rem;
+      &__image {
+        width: 4.5rem;
+        height: 4.5rem;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 0.3rem solid $green-500;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        padding: 0.2rem;
+        img {
+          @include imageCover;
+          border-radius: 50%;
+        }
+      }
+      &__details {
+        margin-left: 1rem;
+        &__name {
+          font-size: 1.3rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: $green-600;
+        }
+        &__date {
+          display: block;
+          i {
+            margin-right: 0.2rem;
+            font-size: 1.2rem;
+            color: $gray-500;
+          }
+          &__time {
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: $gray-500;
+          }
+        }
+      }
+    }
+    &__body {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+      &__title {
+        margin-bottom: 0.3rem;
+        a {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: $gray-800;
+          text-decoration: none;
+        }
+      }
+      &__link {
+        text-decoration: none;
+        color: $gray-900;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

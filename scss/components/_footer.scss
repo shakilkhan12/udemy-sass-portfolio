@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+.footer {
+  padding: $padding-y 0;
+  background: linear-gradient(to top, $white 50%, $gray-50 50%);
+  &__image {
+    width: 18rem;
+    height: 18rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border-left: 0.6rem dotted $green-500;
+    position: relative;
+    img {
+      @include imageCover;
+      border-radius: 50%;
+    }
+    &__label {
+      @include position(absolute, 0, -9rem, null, null);
+      background: $green-500;
+      color: $white;
+      padding: 0.8rem 1.3rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      border-top-left-radius: 50%;
+    }
+  }
+  &__copyright {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    width: 70%;
+    color: $black;
+    &--name {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $green-600;
+      text-transform: capitalize;
+    }
+  }
+}

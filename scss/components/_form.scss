@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+.form {
+  width: 100%;
+  background: $white;
+  padding: 2rem;
+  &__control {
+    width: 100%;
+    border: none;
+    border-bottom: 0.1rem solid $gray-200;
+    outline: none;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $gray-800;
+    font-family: "Poppins", sans-serif;
+  }
+}
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $gray-500;
+}

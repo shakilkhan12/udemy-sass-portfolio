@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  height: 4.3rem;
+  line-height: 4.3rem;
+  padding: 0 1.5rem;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  text-transform: capitalize;
+  transition: outline 0.3s linear;
+  @include responsive(xsm) {
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    font-size: 1.2rem;
+  }
+  &-default {
+    background: $green-500;
+    color: $white;
+    &:focus {
+      outline: 0.4rem solid $green-100;
+    }
+  }
+  &-dark {
+    background: $black;
+    color: $white;
+    &:focus {
+      outline: 0.4rem solid $black-light;
+    }
+  }
+}
